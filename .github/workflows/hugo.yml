@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: lightgray;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .filled {
+            background-color: red;
+        }
+        .recreio {
+            background-color: yellow !important;
+        }
+        .orange {
+            background-color: orange !important;
+        }
+        .green {
+            background-color: green !important;
+        }
+        .blue {
+            background-color: blue !important;
+        }
+        .pink {
+            background-color: pink !important;
+        }
+        .purple {
+            background-color: purple !important;
+        }
+        .beige {
+            background-color: beige !important;
+        }
+        .light-red {
+            background-color: lightcoral !important;
+        }
+        .light-blue {
+            background-color: lightblue !important;
+        }
+        .dark-gray {
+            background-color: darkgray !important;
+        }
+        input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agenda Virtual - LIED</h1>
+
+    <h2>Matutino</h2>
+    <table id="matutino">
+        <tr>
+            <th>Horários</th>
+            <th>Segunda-feira</th>
+            <th>Terça-feira</th>
+            <th>Quarta-feira</th>
+            <th>Quinta-feira</th>
+            <th>Sexta-feira</th>
+        </tr>
+        <tr>
+            <td>07h30min</td>
+            <td id="segunda1" class="empty" onclick="editarSessao('segunda1')">Clique para editar</td>
+            <td id="terca1" class="empty" onclick="editarSessao('terca1')">Clique para editar</td>
+            <td id="quarta1" class="empty" onclick="editarSessao('quarta1')">Clique para editar</td>
+            <td id="quinta1" class="empty" onclick="editarSessao('quinta1')">Clique para editar</td>
+            <td id="sexta1" class="empty" onclick="editarSessao('sexta1')">Clique para editar</td>
+        </tr>
+        <tr>
+            <td>08h26min</td>
+            <td id="segunda2" class="empty" onclick="editarSessao('segunda2')">Clique para editar</td>
+            <td id="terca2" class="empty" onclick="editarSessao('terca2')">Clique para editar</td>
+            <td id="quarta2" class="empty" onclick="editarSessao('quarta2')">Clique para editar</td>
+            <td id="quinta2" class="empty" onclick="editarSessao('quinta2')">Clique para editar</td>
+            <td id="sexta2" class="empty" onclick="editarSessao('sexta2')">Clique para editar</td>
+        </tr>
+        <tr>
+            <td class="recreio">09h22min - Recreio</td>
+            <td id="segunda3" class="empty" onclick="editarSessao('segunda3')">Clique para editar</td>
+            <td id="terca3" class="empty" onclick="editarSessao('terca3')">Clique para editar</td>
+            <td id="quarta3" class="empty" onclick="editarSessao('quarta3')">Clique para editar</td>
+            <td id="quinta3" class="empty" onclick="editarSessao('quinta3')">Clique para editar</td>
+            <td id="sexta3" class="empty" onclick="editarSessao('sexta3')">Clique para editar</td>
+        </tr>
+        <tr>
+            <td>09h38min</td>
+            <td id="segunda4" class="empty" onclick="editarSessao('segunda4')">Clique para editar</td>
+            <td id="terca4" class="empty" onclick="editarSessao('terca4')">Clique para editar</td>
+            <td id="quarta4" class="empty" onclick="editarSessao('quarta4')">Clique para editar</td>
+            <td id="quinta4" class="empty" onclick="editarSessao('quinta4')">Clique para editar</td>
+            <td id="sexta4" class="empty" onclick="editarSessao('sexta4')">Clique para editar</td>
+        </tr>
+        <tr>
+            <td>10h34min</td>
+            <td id="segunda5" class="empty" onclick="editarSessao('segunda5')">Clique para editar</td>
+            <td id="terca5" class="empty" onclick="editarSessao('terca5')">Clique para editar</td>
+            <td id="quarta5" class="empty" onclick="editarSessao('quarta5')">Clique para editar</td>
+            <td id="quinta5" class="empty" onclick="editarSessao('quinta5')">Clique para editar</td>
+            <td id="sexta5" class="empty" onclick="editarSessao('sexta5')">Clique para editar</td>
+        </tr>
+    </table>
+
+    <h2>Vespertino</h2>
+    <table id="vespertino">
+        <tr>
+            <th>Horários</th>
+            <th>Segunda-feira</th>
+            <th>Terça-feira</th>
+            <th>Quarta-feira</th>
+            <th>Quinta-feira</th>
+            <th>Sexta-feira</th>
+        </tr>
+        <tr>
+            <td>13h00min</td>
+            <td id="segunda6" class="empty" onclick="editarSessao('segunda6')">Clique para editar</td>
+            <td id="terca6" class="empty" onclick="editarSessao('terca6')">Clique para editar</td>
+            <td id="quarta6" class="empty" onclick="editarSessao('quarta6')">Clique para editar</td>
+            <td id="quinta6" class="empty" onclick="editarSessao('quinta6')">Clique para editar</td>
+            <td id="sexta6" class="empty" onclick="editarSessao('sexta6')">Clique para editar</td>
+        </tr>
+        <tr>
+            <td>13h56min</td>
+            <td id="segunda7" class="empty" onclick="editarSessao('segunda7')">Clique para editar</td>
+            <td id="terca7" class="empty" onclick="editarSessao('terca7')">Clique para editar</td>
+            <td id="quarta7" class="empty" onclick="editarSessao('quarta7')">Clique para editar</td>
+            <td id="quinta7" class="empty" onclick="editarSessao('quinta7')">Clique para editar</td>
+            <td id="sexta7" class="empty" onclick="editarSessao('sexta7')">Clique para editar</td>
+        </tr>
+        <tr>
+            <td class="recreio">14h52min - Recreio</td>
+            <td id="segunda8" class="empty" onclick="editarSessao('segunda8')">Clique para editar</td>
+            <td id="terca8" class="empty" onclick="editarSessao('terca8')">Clique para editar</td>
+            <td id="quarta8" class="empty" onclick="editarSessao('quarta8')">Clique para editar</td>
+            <td id="quinta8" class="empty" onclick="editarSessao('quinta8')">Clique para editar</td>
+            <td id="sexta8" class="empty" onclick="editarSessao('sexta8')">Clique para editar</td>
+        </tr>
+        <tr>
+            <td>15h08min</td>
+            <td id="segunda9" class="empty" onclick="editarSessao('segunda9')">Clique para editar</td>
+            <td id="terca9" class="empty" onclick="editarSessao('terca9')">Clique para editar</td>
+            <td id="quarta9" class="empty" onclick="editarSessao('quarta9')">Clique para editar</td>
+            <td id="quinta9" class="empty" onclick="editarSessao('quinta9')">Clique para editar</td>
+            <td id="sexta9" class="empty" onclick="editarSessao('sexta9')">Clique para editar</td>
+        </tr>
+        <tr>
+            <td>16h04min</td>
+            <td id="segunda10" class="empty" onclick="editarSessao('segunda10')">Clique para editar</td>
+            <td id="terca10" class="empty" onclick="editarSessao('terca10')">Clique para editar</td>
+            <td id="quarta10" class="empty" onclick="editarSessao('quarta10')">Clique para editar</td>
+            <td id="quinta10" class="empty" onclick="editarSessao('quinta10')">Clique para editar</td>
+            <td id="sexta10" class="empty" onclick="editarSessao('sexta10')">Clique para editar</td>
+        </tr>
+    </table>
+
+    <script>
+        // Função para editar a sessão
+        function editarSessao(id) {
+            var sessao = document.getElementById(id);
+            var texto = prompt("Insira o texto para esta sessão:", sessao.textContent);
+            if (texto !== null) {
+                if (texto.trim() !== "") {
+                    // Salvar os dados no armazenamento local
+                    localStorage.setItem(id, texto);
+                    sessao.textContent = texto;
+                    verificarCor(sessao, texto);
+                    sessao.classList.add('filled');
+                } else {
+                    // Remover os dados do armazenamento local
+                    localStorage.removeItem(id);
+                    sessao.textContent = "Clique para editar";
+                    sessao.classList.remove('filled');
+                    sessao.style.backgroundColor = ''; // Voltar para a cor padrão
+                }
+            }
+        }
+
+        // Verificar o texto e atribuir cor correspondente
+        function verificarCor(sessao, texto) {
+            if (texto.includes("1ºAno A") || texto.includes("1ºAno B")) {
+                sessao.style.backgroundColor = "orange";
+            } else if (texto.includes("2ºAno A") || texto.includes("2ºAno B")) {
+                sessao.style.backgroundColor = "green";
+            } else if (texto.includes("3ºAno A") || texto.includes("3ºAno B")) {
+                sessao.style.backgroundColor = "blue";
+            } else if (texto.includes("4ºAno A") || texto.includes("4ºAno B")) {
+                sessao.style.backgroundColor = "pink";
+            } else if (texto.includes("5ºAno A") || texto.includes("5ºAno B")) {
+                sessao.style.backgroundColor = "purple";
+            } else if (texto.includes("6ºAno A") || texto.includes("6ºAno B")) {
+                sessao.style.backgroundColor = "beige";
+            } else if (texto.includes("7ºAno A") || texto.includes("7ºAno B")) {
+                sessao.style.backgroundColor = "lightcoral";
+            } else if (texto.includes("8ºAno A") || texto.includes("8ºAno B")) {
+                sessao.style.backgroundColor = "lightblue";
+            } else if (texto.includes("9ºAno A") || texto.includes("9ºAno B")) {
+                sessao.style.backgroundColor = "darkgray";
+            } else if (texto.includes("Recreio")) {
+                sessao.style.backgroundColor = "yellow";
+            } else {
+                sessao.style.backgroundColor = ''; // Voltar para a cor padrão
+            }
+        }
+
+        // Carregar os dados do armazenamento local ao carregar a página
+        window.onload = function() {
+            for (var i = 1; i <= 10; i++) {
+                var idMatutino = 'segunda' + i;
+                var idVespertino = 'segunda' + (i + 5);
+                var sessaoMatutino = document.getElementById(idMatutino);
+                var sessaoVespertino = document.getElementById(idVespertino);
+                var textoMatutino = localStorage.getItem(idMatutino);
+                var textoVespertino = localStorage.getItem(idVespertino);
+                if (textoMatutino !== null && textoMatutino.trim() !== "") {
+                    sessaoMatutino.textContent = textoMatutino;
+                    verificarCor(sessaoMatutino, textoMatutino);
+                    sessaoMatutino.classList.add('filled');
+                }
+                if (textoVespertino !== null && textoVespertino.trim() !== "") {
+                    sessaoVespertino.textContent = textoVespertino;
+                    verificarCor(sessaoVespertino, textoVespertino);
+                    sessaoVespertino.classList.add('filled');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
